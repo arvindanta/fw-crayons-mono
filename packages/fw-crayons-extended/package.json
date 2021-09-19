@@ -1,7 +1,7 @@
 {
-  "name": "fw-crayons",
-  "version": "0.0.2",
-  "description": "",
+  "name": "fw-crayons-extended",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
   "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
@@ -9,24 +9,21 @@
   "types": "dist/custom-elements/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/fw-crayons-core/fw-crayons-core.esm.js",
+  "unpkg": "dist/fw-crayons-extended/fw-crayons-extended.esm.js",
   "files": [
     "dist/",
     "loader/"
   ],
   "scripts": {
-    "build:components": "stencil build --docs && npm run build:scss && npm run build:autoprefix && npm run build:min",
-    "build": "npm run build:components",
-    "build:autoprefix": "postcss dist/css/*.css --use autoprefixer --dir  dist/css/",
-    "build:min": "cleancss -b dist/css/*.css dist/css/",
-    "build:scss": "node-sass --include-path node_modules --include-path ../../node_modules --output-style compressed --recursive src/styles/global/ -o dist/css",
+    "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.7.0"
+    "@stencil/core": "^2.7.0",
+    "fw-crayons": "*"
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.1.0",
