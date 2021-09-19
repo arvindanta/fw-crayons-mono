@@ -22,7 +22,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.7.0",
+    "@stencil/core": "^2.8.0",
     "fw-crayons": "*"
   },
   "devDependencies": {

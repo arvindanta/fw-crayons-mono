@@ -31,8 +31,7 @@ export const config: Config = {
     //   name: 'custom-element-docs',
     // },
     {
-      type: 'www',
-      dir: 'src/.vuepress/public/www/',
+      type: 'www'
     },
     reactOutputTarget({
       componentCorePackage: 'fw-crayons-extended', //name in the package.json should be used

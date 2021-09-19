@@ -12,8 +12,8 @@
     "clean": "rimraf dist",
     "compile": "npm run build:cjs && npm run build:esm",
     "tsc": "tsc -p .",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "build:esm": "tsc --module es6 --outDir dist/esm"
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs --skipLibCheck true",
+    "build:esm": "tsc --module es6 --outDir dist/esm --skipLibCheck true"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
