@@ -9,7 +9,7 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   autoprefixCss: true,
-  namespace: 'fw-crayons',
+  namespace: 'crayons',
   outputTargets: [
     {
       type: 'dist',
@@ -35,7 +35,7 @@ export const config: Config = {
       dir: 'src/.vuepress/public/www/',
     },
     reactOutputTarget({
-      componentCorePackage: 'fw-crayons',
+      componentCorePackage: 'fw-crayons', //name in the package.json should be used
       proxiesFile: '../fw-crayons-react/src/components.ts',
 
       // lazy load -> code splitting
