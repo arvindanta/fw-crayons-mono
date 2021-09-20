@@ -1,6 +1,6 @@
 {
   "name": "fw-crayons-react",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Arvind",
   "license": "MIT",
   "description": "React specific wrapper for fwcrayons",
@@ -38,6 +38,6 @@
     "typescript": "4.2.4"
   },
   "dependencies": {
-    "fw-crayons": "*"
+    "fw-crayons": "^0.0.4"
   }
 }
