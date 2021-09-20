@@ -1,3 +1,7 @@
 :host {
   display: block;
+  --ext-bg-color: #{$btn-delete-disabled-border};
+}
+.extended {
+  background: var(--ext-bg-color);
 }

@@ -27,6 +27,9 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()} component</div>;
+    return <div>Hello, World! I'm {this.getText()} component
+    
+      <p class="para">Styled component</p>
+    </div>;
   }
 }

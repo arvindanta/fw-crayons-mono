@@ -1,3 +1,10 @@
 :host {
   display: block;
+  --font-cmp-size: #{$font-size-10};
+  --para-color: #{$color-azure-800};
+}
+
+.para {
+  color: var(--para-color);
+  font-size: var(--font-cmp-size);
 }

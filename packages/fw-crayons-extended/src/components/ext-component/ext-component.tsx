@@ -10,7 +10,7 @@ export class ExtComponent {
 
   render() {
     return (
-     <div>
+     <div class="extended">
        Extended component from core package upgraded:
        <br/>
 
