@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "npm run clean && npm run tscdisable && npm run compile",
+    "build": "npm run clean && npm run compile",
     "clean": "rimraf dist",
     "tscdisable": "node util",
     "compile": "npm run build:cjs && npm run build:esm",

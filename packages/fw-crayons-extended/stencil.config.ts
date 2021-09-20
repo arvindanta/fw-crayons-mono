@@ -7,6 +7,10 @@ import { sass } from '@stencil/sass';
 
 //import { generateJsonDocs } from './customElementDocGenerator';
 
+import { components } from 'fw-crayons/dist/docs.json';
+const webComponents = components.map((c) => c.tag);
+
+
 export const config: Config = {
   autoprefixCss: true,
   namespace: 'crayons-extended',
@@ -33,6 +37,10 @@ export const config: Config = {
     {
       type: 'www'
     },
+    {
+      type: 'docs-json',
+      file: 'dist/docs.json'
+    },
     reactOutputTarget({
       componentCorePackage: 'fw-crayons-extended', //name in the package.json should be used
       proxiesFile: '../fw-crayons-react-extended/src/components.ts',
@@ -44,6 +52,7 @@ export const config: Config = {
       // tree shakable, need to use setassetpath
       customElementsDir: 'dist/components',
       includeImportCustomElements: true,
+      excludeComponents:webComponents
     }),
   ],
   globalScript: 'src/global/app.ts',

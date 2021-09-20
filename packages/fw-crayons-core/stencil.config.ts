@@ -33,6 +33,10 @@ export const config: Config = {
     {
       type: 'www'
     },
+    {
+      type: 'docs-json',
+      file: 'dist/docs.json'
+    },
     reactOutputTarget({
       componentCorePackage: 'fw-crayons', //name in the package.json should be used
       proxiesFile: '../fw-crayons-react/src/components.ts',
