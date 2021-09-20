@@ -32,7 +32,6 @@
   display: inline-block;
   //=== Button Style===//
 }
-
 @media (prefers-reduced-motion) {
   .fw-btn {
     transition: none;
@@ -74,7 +73,11 @@
     background-color: var(--btn-primary-bg);
     color: var(--btn-primary-color);
     border: 1px solid var(--btn-primary-border);
-    background-image: linear-gradient(to bottom, var(--btn-primary-bg), var(--btn-primary-bg-dark));
+    background-image: linear-gradient(
+      to bottom,
+      var(--btn-primary-bg),
+      var(--btn-primary-bg-dark)
+    );
 
     &:active {
       border: 1px solid var(--btn-primary-border-active);
@@ -91,7 +94,11 @@
     background-color: var(--btn-secondary-bg-dark);
     color: var(--btn-secondary-color);
     border: 1px solid var(--btn-secondary-border);
-    background-image: linear-gradient(to bottom, var(--btn-secondary-bg), var(--btn-secondary-bg-dark));
+    background-image: linear-gradient(
+      to bottom,
+      var(--btn-secondary-bg),
+      var(--btn-secondary-bg-dark)
+    );
 
     &:active {
       border: 1px solid var(--btn-secondary-border-active);
@@ -108,7 +115,11 @@
     color: var(--btn-danger-color);
     background-color: var(--btn-danger-bg);
     border: 1px solid var(--btn-danger-border);
-    background-image: linear-gradient(to bottom, var(--btn-danger-bg), var(--btn-danger-bg-dark));
+    background-image: linear-gradient(
+      to bottom,
+      var(--btn-danger-bg),
+      var(--btn-danger-bg-dark)
+    );
 
     &:focus:not([disabled]),
     &:hover:not([disabled]) {
