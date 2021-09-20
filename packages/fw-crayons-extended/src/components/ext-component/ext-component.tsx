@@ -11,7 +11,7 @@ export class ExtComponent {
   render() {
     return (
      <div>
-       Extended component from core package:
+       Extended component from core package upgraded:
        <br/>
 
        <fw-button
