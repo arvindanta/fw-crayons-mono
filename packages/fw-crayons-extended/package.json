@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@stencil/core": "^2.8.0",
-    "fw-crayons": "^0.0.3"
+    "fw-crayons": "*"
   },
   "devDependencies": {
     "@stencil/react-output-target": "^0.1.0",

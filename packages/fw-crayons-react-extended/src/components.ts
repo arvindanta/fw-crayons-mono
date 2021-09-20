@@ -1,7 +1,7 @@
+// @ts-nocheck
 /* eslint-disable */
 /* tslint:disable */
 /* auto-generated react proxies */
-//@ts-nocheck
 import { createReactComponent } from './react-component-lib';
 
 import type { JSX } from 'fw-crayons-extended/dist/components';
