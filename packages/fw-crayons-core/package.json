@@ -1,9 +1,9 @@
 {
   "name": "fw-crayons",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "",
-  "main": "output.js",
-  "module": "output.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
   "types": "dist/custom-elements/index.d.ts",
@@ -13,29 +13,12 @@
   "files": [
     "dist/",
     "loader/",
-    "www",
-    "output.js"
+    "www/",
+    "react/"
   ],
-  "exports": {
-    "./react1/": "./dist/react/",
-    "./package.json": "./package.json",
-    "./dist/*": "./dist/*",
-    "./loader": "./loader",
-    ".": "./output.js"
-  },
-  "typesVersions": {
-    "*": {
-      "react1": [
-        "dist/react/index.d.ts"
-      ],
-      "loader": [
-        "loader/index.d.ts"
-      ]
-    }
-  },
   "scripts": {
     "build:components": "stencil build --docs && npm run build:scss && npm run build:autoprefix && npm run build:min",
-    "build": "npm run build:components && npm run build:react",
+    "build": "npm run add:react && npm run build:components && npm run build:react",
     "build:autoprefix": "postcss dist/css/*.css --use autoprefixer --dir  dist/css/",
     "build:min": "cleancss -b dist/css/*.css dist/css/",
     "build:scss": "node-sass --include-path node_modules --include-path ../../node_modules --output-style compressed --recursive src/styles/global/ -o dist/css",
@@ -44,9 +27,10 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "build:react": "npm run clean:react && npm run compile:react",
-    "clean:react": "rimraf dist/react",
+    "clean:react": "rimraf react",
+    "add:react": "npx mkdirp react",
     "compile:react": "npm run build:esm",
-    "build:esm": "tsc --project tsconfig-react.json --module es6 --outDir dist/react"
+    "build:esm": "tsc --project tsconfig-react.json --module es6 --outDir react"
   },
   "dependencies": {
     "@stencil/core": "^2.8.0"
