@@ -42,7 +42,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: 'fw-crayons-extended', //name in the package.json should be used
-      proxiesFile: '../fw-crayons-react-extended/src/components.ts',
+      proxiesFile: './crayons-react-extended/src/components.ts',
 
       // lazy load -> code splitting
       // includeDefineCustomElements: true,
@@ -79,7 +79,7 @@ export const config: Config = {
     ],
     coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
   },
-  buildEs5: 'prod',
+  buildEs5: true,
   extras: {
     appendChildSlotFix: true,
     cssVarsShim: true,

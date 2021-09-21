@@ -26,9 +26,9 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
-    "build:react": "npm run clean:react && npm run compile:react",
+    "build:react": "npm run compile:react",
     "clean:react": "rimraf react",
-    "add:react": "npx mkdirp react",
+    "add:react": "rimraf react && npx mkdirp react",
     "compile:react": "npm run build:esm",
     "build:esm": "tsc --project tsconfig-react.json --module es6 --outDir react"
   },
