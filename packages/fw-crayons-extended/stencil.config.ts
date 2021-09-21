@@ -8,8 +8,7 @@ import { sass } from '@stencil/sass';
 //import { generateJsonDocs } from './customElementDocGenerator';
 
 import { components } from 'fw-crayons/dist/docs.json';
-const webComponents = components.map((c) => c.tag);
-
+const webComponents = components.map(c => c.tag);
 
 export const config: Config = {
   autoprefixCss: true,
@@ -35,11 +34,11 @@ export const config: Config = {
     //   name: 'custom-element-docs',
     // },
     {
-      type: 'www'
+      type: 'www',
     },
     {
       type: 'docs-json',
-      file: 'dist/docs.json'
+      file: 'dist/docs.json',
     },
     reactOutputTarget({
       componentCorePackage: 'fw-crayons-extended', //name in the package.json should be used
@@ -52,7 +51,7 @@ export const config: Config = {
       // tree shakable, need to use setassetpath
       customElementsDir: 'dist/components',
       includeImportCustomElements: true,
-      excludeComponents:webComponents
+      excludeComponents: webComponents,
     }),
   ],
   globalScript: 'src/global/app.ts',
@@ -80,7 +79,7 @@ export const config: Config = {
     ],
     coverageReporters: ['json', 'lcov', 'text', 'clover', 'text-summary'],
   },
-  buildEs5: true,
+  buildEs5: 'prod',
   extras: {
     appendChildSlotFix: true,
     cssVarsShim: true,

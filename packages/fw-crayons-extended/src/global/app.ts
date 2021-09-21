@@ -1,1 +1,1 @@
-import "fw-crayons";
+import 'fw-crayons/react';
