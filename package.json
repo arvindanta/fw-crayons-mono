@@ -21,12 +21,15 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "lerna": "^4.0.0",
     "prettier": "^2.4.1",
     "stylelint": "^13.13.1",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-recommended": "^5.0.0",
     "stylelint-prettier": "^1.2.0",
     "stylelint-scss": "^3.21.0"
+  },
+  "dependencies": {
+    "lerna": "^4.0.0"
+
   }
 }
